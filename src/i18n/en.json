@@ -1,0 +1,282 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "contact": "Contact",
+    "clientLogin": "Client Login"
+  },
+  "hero": {
+    "tagline": "Capturing Timeless Moments",
+    "subtitle": "WEDDINGS AND EVENTS PHOTOGRAPHER",
+    "cta": "View Portfolio"
+  },
+  "services": {
+    "badge": "Services",
+    "title": "Wedding Collections",
+    "subtitle": "Each collection is designed to document your day with authenticity, emotion, and attention to detail. All services include professional editing and digital delivery.",
+    "cta": "Inquire",
+    "packages": {
+      "photo": {
+        "title": "Photography Package",
+        "description": "Complete photography coverage for a single event, reception, or evening. Designed to capture every meaningful moment naturally and elegantly.",
+        "features": [
+          "Unlimited professionally edited photos",
+          "Full event coverage",
+          "High-resolution digital delivery",
+          "Private online gallery"
+        ]
+      },
+      "photoVideo": {
+        "title": "Photography & Videography Package",
+        "description": "A complete visual storytelling experience combining timeless photography with cinematic video coverage.",
+        "features": [
+          "Unlimited professionally edited photos",
+          "Full HD video covering the entire event (1–2 hours)",
+          "Cinematic highlight trailer (1–2 minutes)",
+          "High-resolution digital delivery"
+        ]
+      },
+      "extras": {
+        "title": "Optional Extras",
+        "description": "Enhance your experience with additional creative coverage and premium keepsakes.",
+        "features": [
+          "Outdoor photoshoot (unlimited photos + Instagram Reel)",
+          "Instagram Reel during the event",
+          "Bride preparation coverage",
+          "Groom preparation coverage",
+          "Coverage at the couple’s home",
+          "Luxury photobook (30 × 60 cm, 20 pages)",
+          "Printed set of 50 selected photos"
+        ]
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Selected Works",
+    "subtitle": "A curation of moments from recent celebrations.",
+    "view": "View",
+    "empty": "Gallery is being curated. Check back soon.",
+    "viewFull": "View Full Gallery",
+    "showLess": "Show Less"
+  },
+  "contact": {
+    "tabs": {
+      "message": "Inquire",
+      "book": "Book Consultation"
+    },
+    "imageTitle": "Let's Create Magic",
+    "imageSubtitle": "Based in Tunis. Available Nationwide.",
+    "message": {
+      "title": "Send a Message",
+      "name": "Name",
+      "email": "Email",
+      "eventDate": "Event Date",
+      "venue": "Venue",
+      "story": "Tell us your story",
+      "cta": "Send Inquiry",
+      "placeholders": {
+        "name": "Jane & John",
+        "email": "hello@example.com",
+        "venue": "City, State",
+        "story": "We met at a coffee shop..."
+      }
+    },
+    "booking": {
+      "title": "Select a Date",
+      "subtitle": "Choose a time for a free 30-min consultation call.",
+      "confirmTitle": "Confirm Booking",
+      "dateLabel": "Date",
+      "yourName": "Your Name",
+      "yourEmail": "Your Email",
+      "cta": "Confirm Request",
+      "empty": "Select a date from the calendar to proceed.",
+      "success": "Consultation request sent!"
+    }
+  },
+ "login": {
+  "brand": "HAMZA SOULI",
+  "close": "Close",
+
+  "client": {
+    "error": "Invalid Access Code. Please check your invitation."
+  },
+
+  "admin": {
+    "password": "Password",
+    "error": "Invalid credentials."
+  },
+
+  "unified": {
+    "subtitle": "Secure Access",
+    "identifierLabel": "Identify Yourself",
+    "identifierPlaceholder": "Email or 6-digit Code",
+    "hint": "Clients: enter your 6-digit access code. Staff/Admin: use your email and password.",
+    "invalidIdentifier": "Please enter a valid email or 6-digit code.",
+    "failed": "Login failed. Please try again.",
+    "cta": "Proceed",
+    "help": {
+      "clients": "Clients: Enter your 6-digit gallery access code.",
+      "staff": "Staff & Admin: Use your registered email and password."
+    }
+  },
+
+  "demo": {
+    "admin": "Demo Admin: {{email}} (password)",
+    "client": "Demo Client Code: {{code}}"
+  }
+},
+
+
+  "footer": {
+    "brand": "Hamza Souli",
+    "tagline": "Capturing light, love, and moments.",
+    "rights": "All rights reserved."
+  },
+  "client": {
+    "welcome": "Welcome, {{name}}",
+    "nextSession": "Next Session",
+    "at": "at",
+    "noUpcoming": "No upcoming appointments.",
+    "myDocuments": "My Documents",
+    "leaveReview": "Leave a Review",
+    "reviewPlaceholder": "How was your experience?",
+    "submitReview": "Submit Review",
+    "backToCollections": "Back to Collections",
+    "downloadAlbum": "Download Album",
+    "download": "Download",
+    "noPhotosYet": "No photos have been added to this album yet.",
+    "yourCollections": "Your Collections",
+    "created": "Created",
+    "noCollectionsYet": "No Collections Yet",
+    "noCollectionsHint": "Your photographer hasn't shared any albums with you yet. Check back soon!"
+  },
+  
+  "common": {
+    "add": "Add",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "logout": "Logout",
+    "na": "N/A",
+    "save": "Save",
+    "view": "View"
+  },
+  "admin": {
+    "common": {
+      "unknownClient": "Unknown Client"
+    },
+    "sidebar": {
+      "title": "Souli Admin",
+      "overview": "Overview",
+      "clients": "Clients",
+      "gallery": "Gallery Manager"
+    },
+    "overview": {
+      "title": "Dashboard Overview",
+      "pendingRequests": "Pending Requests",
+      "totalAlbums": "Total Albums",
+      "activeClients": "Active Clients",
+      "allAppointments": "All Appointments",
+      "editAppointment": "Edit Appointment",
+      "noAppointments": "No appointments found.",
+      "table": {
+        "client": "Client",
+        "dateTime": "Date & Time",
+        "type": "Type",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "form": {
+        "status": "Status",
+        "date": "Date",
+        "time": "Time",
+        "type": "Type"
+      },
+      "status": {
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "completed": "Completed"
+      }
+    },
+    "clients": {
+      "title": "Client Management",
+      "filters": {
+        "active": "Active",
+        "archived": "Archived"
+      },
+      "newClient": "New Client",
+      "registerTitle": "Register New Client",
+      "manageFile": "Manage File",
+      "archive": "Archive Client",
+      "restore": "Restore Client",
+      "confirmArchive": "Are you sure you want to archive this client?",
+      "confirmRestore": "Restore this client to the active list?",
+      "confirmDeleteDocument": "Delete this document?",
+      "none": "No {{filter}} clients found.",
+      "noPhone": "No Phone",
+      "codeLabel": "Code:",
+      "detailsTitle": "Client Details",
+      "assignedAlbums": "Assigned Albums",
+      "noPrivateAlbums": "No private albums assigned.",
+      "documents": "Documents",
+      "attach": "Attach",
+      "noDocuments": "No documents attached.",
+      "labels": {
+        "email": "Email",
+        "phone": "Phone",
+        "loginCode": "Login Code",
+        "status": "Status"
+      },
+      "table": {
+        "clientInfo": "Client Info",
+        "loginCode": "Login Code",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "status": {
+        "active": "Active",
+        "archived": "Archived"
+      },
+      "form": {
+        "fullName": "Full Name",
+        "fullNamePlaceholder": "Jane Doe",
+        "email": "Email Address",
+        "emailPlaceholder": "client@example.com (optional)",
+        "phone": "Phone Number",
+        "phonePlaceholder": "+1 (555) 000-0000",
+        "loginCode": "Login Code (RN)",
+        "generateCode": "Generate RN",
+        "create": "Create Client File"
+      }
+    },
+    "gallery": {
+      "title": "Gallery Albums",
+      "newAlbum": "New Album",
+      "backToAlbums": "Back to Albums",
+      "badgeClient": "Client",
+      "publicPortfolioLabel": "Public Portfolio",
+      "assignedTo": "Assigned to: {{name}}",
+      "photoCount": "{{count}} photos",
+      "processing": "Processing images...",
+      "uploadClick": "Click to upload photos from your device",
+      "uploadHint": "(Supports bulk upload)",
+      "orAddViaUrl": "Or add via URL",
+      "emptyAlbum": "This album is empty. Upload some photos to get started.",
+      "untitled": "Untitled",
+      "confirmDeleteAlbum": "Are you sure you want to delete this album and all its photos?",
+      "confirmDeletePhoto": "Are you sure you want to delete this photo?",
+      "form": {
+        "albumTitle": "Album Title",
+        "albumTitlePlaceholder": "e.g. Summer 2024 Collection",
+        "assignClient": "Assign to Client (Optional)",
+        "publicPortfolio": "-- Public Portfolio --",
+        "createAlbum": "Create Album",
+        "imageUrl": "Image URL",
+        "titleOptional": "Title (Optional)",
+        "titlePlaceholder": "Image Title"
+      }
+    }
+  }
+}
+
+

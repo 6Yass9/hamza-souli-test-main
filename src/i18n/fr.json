@@ -1,0 +1,278 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "contact": "Contact",
+    "clientLogin": "Connexion client"
+  },
+  "hero": {
+    "tagline": "Capturer des moments intemporels",
+    "subtitle": "PHOTOGRAPHE MARIAGES & ÉVÉNEMENTS",
+    "cta": "Voir le portfolio"
+  },
+  "services": {
+    "badge": "Services",
+    "title": "Collections de mariage",
+    "subtitle": "Chaque collection est conçue pour raconter votre journée avec authenticité, émotion et sens du détail. Tous les services incluent une retouche professionnelle et une livraison digitale.",
+    "cta": "Demander",
+    "packages": {
+      "photo": {
+        "title": "Pack Photographie",
+        "description": "Couverture photo complète d’un événement, réception ou soirée. Pour capturer chaque moment naturellement et avec élégance.",
+        "features": [
+          "Photos retouchées en illimité",
+          "Couverture complète de l’événement",
+          "Livraison digitale en haute résolution",
+          "Galerie privée en ligne"
+        ]
+      },
+      "photoVideo": {
+        "title": "Pack Photo & Vidéo",
+        "description": "Une expérience complète qui combine une photographie intemporelle et une vidéo cinématographique.",
+        "features": [
+          "Photos retouchées en illimité",
+          "Vidéo Full HD de l’événement (1–2 heures)",
+          "Trailer cinématique (1–2 minutes)",
+          "Livraison digitale en haute résolution"
+        ]
+      },
+      "extras": {
+        "title": "Options supplémentaires",
+        "description": "Améliorez votre expérience avec des options créatives et des souvenirs premium.",
+        "features": [
+          "Séance extérieure (photos illimitées + Reel Instagram)",
+          "Reel Instagram pendant l’événement",
+          "Préparatifs de la mariée",
+          "Préparatifs du marié",
+          "Couverture au domicile du couple",
+          "Livre photo luxe (30 × 60 cm, 20 pages)",
+          "Impression de 50 photos sélectionnées"
+        ]
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Œuvres sélectionnées",
+    "subtitle": "Une sélection de moments de célébrations récentes.",
+    "view": "Voir",
+    "empty": "La galerie est en cours de création. Revenez bientôt.",
+    "viewFull": "Voir toute la galerie",
+    "showLess": "Afficher moins"
+  },
+  "contact": {
+    "tabs": {
+      "message": "Demande",
+      "book": "Réserver une consultation"
+    },
+    "imageTitle": "Créons de la magie",
+    "imageSubtitle": "Basé à Tunis. Disponible partout.",
+    "message": {
+      "title": "Envoyer un message",
+      "name": "Nom",
+      "email": "Email",
+      "eventDate": "Date de l’événement",
+      "venue": "Lieu",
+      "story": "Racontez-nous votre histoire",
+      "cta": "Envoyer",
+      "placeholders": {
+        "name": "Jane & John",
+        "email": "hello@example.com",
+        "venue": "Ville, Pays",
+        "story": "On s’est rencontrés dans un café..."
+      }
+    },
+    "booking": {
+      "title": "Choisir une date",
+      "subtitle": "Choisissez un créneau pour un appel gratuit de 30 minutes.",
+      "confirmTitle": "Confirmer la réservation",
+      "dateLabel": "Date",
+      "yourName": "Votre nom",
+      "yourPhone": "Numéro de téléphone",
+      "cta": "Confirmer la demande",
+      "empty": "Sélectionnez une date sur le calendrier pour continuer.",
+      "success": "Demande de consultation envoyée !",
+      "errors": {
+        "required": "Veuillez remplir tous les champs.",
+        "invalidPhone": "Numéro de téléphone invalide.",
+        "generic": "Une erreur est survenue. Veuillez réessayer."
+      }
+    }
+  },
+  "login": {
+    "brand": "HAMZA SOULI",
+    "unified": {
+      "subtitle": "Accès sécurisé",
+      "identifierLabel": "Identifiez-vous",
+      "identifierPlaceholder": "Email ou code à 6 chiffres",
+      "invalidIdentifier": "Veuillez entrer un email valide ou un code à 6 chiffres.",
+      "failed": "Échec de la connexion. Veuillez réessayer.",
+      "cta": "Continuer",
+      "hint": "Entrez votre email professionnel ou votre code client.",
+      "help": {
+        "clients": "Clients : entrez votre code d’accès à 6 chiffres.",
+        "staff": "Équipe & Admin : utilisez votre email et mot de passe."
+      }
+    },
+    "client": {
+      "error": "Code d’accès invalide. Veuillez vérifier votre invitation."
+    },
+    "admin": {
+      "password": "Mot de passe",
+      "error": "Identifiants incorrects."
+    },
+    "close": "Fermer",
+    "demo": {
+      "admin": "Admin démo : {{email}} (mot de passe)",
+      "client": "Code client démo : {{code}}"
+    }
+  },
+  "footer": {
+    "brand": "Hamza Souli",
+    "tagline": "Capturer la lumière, l’amour et les moments.",
+    "rights": "Tous droits réservés."
+  },
+  "client": {
+    "welcome": "Bienvenue, {{name}}",
+    "nextSession": "Prochaine séance",
+    "at": "à",
+    "noUpcoming": "Aucun rendez-vous à venir.",
+    "myDocuments": "Mes documents",
+    "leaveReview": "Laisser un avis",
+    "reviewPlaceholder": "Comment s’est passée votre expérience ?",
+    "submitReview": "Envoyer l’avis",
+    "backToCollections": "Retour aux collections",
+    "downloadAlbum": "Télécharger l’album",
+    "download": "Télécharger",
+    "noPhotosYet": "Aucune photo n’a encore été ajoutée à cet album.",
+    "yourCollections": "Vos collections",
+    "created": "Créé",
+    "noCollectionsYet": "Aucune collection",
+    "noCollectionsHint": "Votre photographe n’a pas encore partagé d’albums avec vous. Revenez bientôt !"
+  },
+  "common": {
+    "add": "Ajouter",
+    "cancel": "Annuler",
+    "edit": "Modifier",
+    "logout": "Déconnexion",
+    "na": "N/A",
+    "save": "Enregistrer",
+    "view": "Voir"
+  },
+  "admin": {
+    "common": {
+      "unknownClient": "Client inconnu"
+    },
+    "sidebar": {
+      "title": "Souli Admin",
+      "overview": "Aperçu",
+      "clients": "Clients",
+      "gallery": "Gestion Galerie"
+    },
+    "overview": {
+      "title": "Aperçu du tableau de bord",
+      "pendingRequests": "Demandes en attente",
+      "totalAlbums": "Total des albums",
+      "activeClients": "Clients actifs",
+      "allAppointments": "Tous les rendez-vous",
+      "editAppointment": "Modifier le rendez-vous",
+      "noAppointments": "Aucun rendez-vous trouvé.",
+      "table": {
+        "client": "Client",
+        "dateTime": "Date & Heure",
+        "type": "Type",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "form": {
+        "status": "Statut",
+        "date": "Date",
+        "time": "Heure",
+        "type": "Type"
+      },
+      "status": {
+        "pending": "En attente",
+        "confirmed": "Confirmé",
+        "completed": "Terminé"
+      }
+    },
+    "clients": {
+      "title": "Gestion des clients",
+      "filters": {
+        "active": "Actifs",
+        "archived": "Archivés"
+      },
+      "newClient": "Nouveau client",
+      "registerTitle": "Enregistrer un nouveau client",
+      "manageFile": "Gérer le dossier",
+      "archive": "Archiver le client",
+      "restore": "Restaurer le client",
+      "confirmArchive": "Voulez-vous vraiment archiver ce client ?",
+      "confirmRestore": "Restaurer ce client dans la liste active ?",
+      "confirmDeleteDocument": "Supprimer ce document ?",
+      "none": "Aucun client {{filter}} trouvé.",
+      "noPhone": "Aucun téléphone",
+      "codeLabel": "Code :",
+      "detailsTitle": "Détails du client",
+      "assignedAlbums": "Albums assignés",
+      "noPrivateAlbums": "Aucun album privé assigné.",
+      "documents": "Documents",
+      "attach": "Joindre",
+      "noDocuments": "Aucun document joint.",
+      "labels": {
+        "email": "Email",
+        "phone": "Téléphone",
+        "loginCode": "Code d'accès",
+        "status": "Statut"
+      },
+      "table": {
+        "clientInfo": "Infos client",
+        "loginCode": "Code d'accès",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "status": {
+        "active": "Actif",
+        "archived": "Archivé"
+      },
+      "form": {
+        "fullName": "Nom complet",
+        "fullNamePlaceholder": "Jane Doe",
+        "email": "Adresse email",
+        "emailPlaceholder": "client@example.com (optionnel)",
+        "phone": "Numéro de téléphone",
+        "phonePlaceholder": "+216 00 000 000",
+        "loginCode": "Code de connexion (RN)",
+        "generateCode": "Générer RN",
+        "create": "Créer le dossier client"
+      }
+    },
+    "gallery": {
+      "title": "Albums de la galerie",
+      "newAlbum": "Nouvel album",
+      "backToAlbums": "Retour aux albums",
+      "badgeClient": "Client",
+      "publicPortfolioLabel": "Portfolio public",
+      "assignedTo": "Assigné à : {{name}}",
+      "photoCount": "{{count}} photos",
+      "processing": "Traitement des images...",
+      "uploadClick": "Cliquez pour importer des photos depuis votre appareil",
+      "uploadHint": "(Import multiple pris en charge)",
+      "orAddViaUrl": "Ou ajouter via URL",
+      "emptyAlbum": "Cet album est vide. Importez des photos pour commencer.",
+      "untitled": "Sans titre",
+      "confirmDeleteAlbum": "Voulez-vous vraiment supprimer cet album et toutes ses photos ?",
+      "confirmDeletePhoto": "Voulez-vous vraiment supprimer cette photo ?",
+      "form": {
+        "albumTitle": "Titre de l'album",
+        "albumTitlePlaceholder": "ex. Collection Été 2024",
+        "assignClient": "Assigner à un client (optionnel)",
+        "publicPortfolio": "-- Portfolio public --",
+        "createAlbum": "Créer l'album",
+        "imageUrl": "URL de l'image",
+        "titleOptional": "Titre (optionnel)",
+        "titlePlaceholder": "Titre de l'image"
+      }
+    }
+  }
+}
