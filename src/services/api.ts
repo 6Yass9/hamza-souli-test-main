@@ -2,7 +2,6 @@ import { Appointment, GalleryItem, User, Album, ClientDocument } from '../types'
 import { supabase } from './supabaseClient';
 
 // helpers to map DB rows -> TS types
-
 const mapUser = (row: any): User => ({
   id: row.id,
   name: row.name,
@@ -63,39 +62,38 @@ export const api = {
 
   // ✅ Unified login for Admin + Staff (email + password)
   loginStaffOrAdmin: async (email: string, password: string) => {
-  const res = await fetch('/api/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ type: 'staff', email, password }),
-  });
+    const res = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'staff', email, password })
+    });
 
-  if (!res.ok) return null;
+    if (!res.ok) return null;
 
-  const { token, user } = await res.json();
-  localStorage.setItem('app_token', token);
-  return user;
-},
+    const { token, user } = await res.json();
+    localStorage.setItem('app_token', token);
+    return user;
+  },
 
-
+  // ✅ Client login (6-digit code)
   loginClient: async (code: string) => {
-  const res = await fetch('/api/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ type: 'client', code }),
-  });
+    const res = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'client', code })
+    });
 
-  if (!res.ok) return null;
+    if (!res.ok) return null;
 
-  const { token, user } = await res.json();
-  localStorage.setItem('app_token', token);
-  return user;
-},
+    const { token, user } = await res.json();
+    localStorage.setItem('app_token', token);
+    return user;
+  },
 
-
-  // --- Staff (NEW) ---
+  // --- Staff ---
 
   getStaff: async (): Promise<User[]> => {
-    const { data, error } = await supabase
+    const { data, error } = await supabase()
       .from('users')
       .select('*')
       .eq('role', 'staff')
@@ -108,7 +106,13 @@ export const api = {
     return data.map(mapUser);
   },
 
-  createStaff: async (firstName: string, familyName: string, email: string, password: string, phone?: string): Promise<User> => {
+  createStaff: async (
+    firstName: string,
+    familyName: string,
+    email: string,
+    password: string,
+    phone?: string
+  ): Promise<User> => {
     const fn = firstName?.trim();
     const ln = familyName?.trim();
     const cleanEmail = email?.trim().toLowerCase();
@@ -120,7 +124,11 @@ export const api = {
     if (!cleanPassword) throw new Error('Password is required');
 
     // optional: check email uniqueness
-    const { data: existing, error: existingError } = await supabase().from('users').select('id').eq('email', cleanEmail).maybeSingle();
+    const { data: existing, error: existingError } = await supabase()
+      .from('users')
+      .select('id')
+      .eq('email', cleanEmail)
+      .maybeSingle();
 
     if (existingError) {
       console.error('Failed to check staff email', existingError);
@@ -130,12 +138,12 @@ export const api = {
 
     const fullName = `${fn} ${ln}`.trim();
 
-    const { data, error } = await supabase
+    const { data, error } = await supabase()
       .from('users')
       .insert({
         name: fullName,
         email: cleanEmail,
-        password: cleanPassword,
+        password: cleanPassword, // NOTE: will be replaced by hashes later
         phone: cleanPhone,
         role: 'staff',
         status: 'active'
@@ -154,7 +162,11 @@ export const api = {
   // --- Clients ---
 
   getClients: async (): Promise<User[]> => {
-    const { data, error } = await supabase().from('users').select('*').eq('role', 'client').order('created_at', { ascending: false });
+    const { data, error } = await supabase()
+      .from('users')
+      .select('*')
+      .eq('role', 'client')
+      .order('created_at', { ascending: false });
 
     if (error || !data) {
       console.error('getClients error', error);
@@ -172,7 +184,11 @@ export const api = {
     const cleanEmail = email?.trim() ? email.trim() : null;
     const cleanPhone = phone?.trim() ? phone.trim() : null;
 
-    const { data: existing, error: existingError } = await supabase().from('users').select('id').eq('login_code', cleanLoginCode).maybeSingle();
+    const { data: existing, error: existingError } = await supabase()
+      .from('users')
+      .select('id')
+      .eq('login_code', cleanLoginCode)
+      .maybeSingle();
 
     if (existingError) {
       console.error('Failed to check login code', existingError);
@@ -180,7 +196,7 @@ export const api = {
     }
     if (existing) throw new Error('Login code already in use');
 
-    const { data, error } = await supabase
+    const { data, error } = await supabase()
       .from('users')
       .insert({
         name: cleanName,
@@ -188,7 +204,7 @@ export const api = {
         phone: cleanPhone,
         role: 'client',
         status: 'active',
-        login_code: cleanLoginCode
+        login_code: cleanLoginCode // NOTE: will be replaced by hashes later
       })
       .select('*')
       .single();
@@ -230,8 +246,13 @@ export const api = {
     if (error) generateError('Failed to unarchive client', error);
   },
 
-  uploadDocument: async (clientId: string, name: string, dataUrl: string, type: ClientDocument['type']): Promise<ClientDocument | null> => {
-    const { data, error } = await supabase
+  uploadDocument: async (
+    clientId: string,
+    name: string,
+    dataUrl: string,
+    type: ClientDocument['type']
+  ): Promise<ClientDocument | null> => {
+    const { data, error } = await supabase()
       .from('client_documents')
       .insert({
         user_id: clientId,
@@ -256,7 +277,11 @@ export const api = {
   },
 
   getClientDocuments: async (clientId: string): Promise<ClientDocument[]> => {
-    const { data, error } = await supabase().from('client_documents').select('*').eq('user_id', clientId).order('uploaded_at', { ascending: false });
+    const { data, error } = await supabase()
+      .from('client_documents')
+      .select('*')
+      .eq('user_id', clientId)
+      .order('uploaded_at', { ascending: false });
 
     if (error || !data) {
       console.error('getClientDocuments error', error);
@@ -290,32 +315,31 @@ export const api = {
   },
 
   createAppointment: async (date: string, name: string, phone: string) => {
-  if (!date || !name || !phone) {
-    throw new Error('Missing required fields');
-  }
+    if (!date || !name || !phone) {
+      throw new Error('Missing required fields');
+    }
 
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
 
-  if (new Date(date) < today) {
-    throw new Error('Cannot book in the past');
-  }
+    if (new Date(date) < today) {
+      throw new Error('Cannot book in the past');
+    }
 
-  const payload = {
-    date,
-    time: '10:00',
-    client_name: name.trim(),
-    phone: phone.trim(),
-    status: 'pending',
-    type: 'Consultation Request'
-  };
+    const payload = {
+      date,
+      time: '10:00',
+      client_name: name.trim(),
+      phone: phone.trim(),
+      status: 'pending',
+      type: 'Consultation Request'
+    };
 
-  const { error } = await supabase().from('appointments').insert(payload);
-  if (error) generateError('Failed to create appointment', error);
+    const { error } = await supabase().from('appointments').insert(payload);
+    if (error) generateError('Failed to create appointment', error);
 
-  return { success: true };
-},
-
+    return { success: true };
+  },
 
   updateAppointment: async (id: string, updates: Partial<Appointment>): Promise<Appointment | null> => {
     const payload: any = {};
@@ -354,7 +378,7 @@ export const api = {
   },
 
   getPublicPhotos: async (): Promise<GalleryItem[]> => {
-    const { data, error } = await supabase
+    const { data, error } = await supabase()
       .from('gallery_items')
       .select('*, albums!inner(client_id)')
       .is('albums.client_id', null)
@@ -390,7 +414,7 @@ export const api = {
   createAlbum: async (title: string, clientId?: string): Promise<Album> => {
     const normalizedClientId = clientId?.trim() ? clientId.trim() : null;
 
-    const { data, error } = await supabase
+    const { data, error } = await supabase()
       .from('albums')
       .insert({
         title,
@@ -438,7 +462,7 @@ export const api = {
   },
 
   addGalleryItem: async (albumId: string, url: string, title?: string): Promise<GalleryItem> => {
-    const { data, error } = await supabase
+    const { data, error } = await supabase()
       .from('gallery_items')
       .insert({
         album_id: albumId,
